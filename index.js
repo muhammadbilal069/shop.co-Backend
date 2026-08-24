@@ -19,7 +19,7 @@ app.use('/api/products', productRoutes);
 
 // Test Route
 app.get('/', (req, res) => {
-  res.send('Server live aur perfectly kaam kar raha hai!');
+  res.send('Server running!');
 });
 
 app.listen(PORT, () => {
