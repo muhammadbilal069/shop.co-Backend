@@ -15,8 +15,17 @@
     "oldPrice": 300,
     "discount": "-40%",
     "category": "Casual",
-    "sizes": ["Small", "Medium", "Large", "X-Large"],
-    "colors": ["#4F533E", "#314F4A", "#31344F"],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "colors": [
+      "#4F533E",
+      "#314F4A",
+      "#31344F"
+    ],
     "isNewArrival": true,
     "isTopSelling": false
   },
@@ -30,8 +39,13 @@
     "oldPrice": 260,
     "discount": "-20%",
     "category": "Casual",
-    "sizes": ["Large", "X-Large"],
-    "colors": ["Blue"],
+    "sizes": [
+      "Large",
+      "X-Large"
+    ],
+    "colors": [
+      "Blue"
+    ],
     "isNewArrival": true,
     "isTopSelling": false
   },
@@ -43,8 +57,13 @@
     "rating": 4.5,
     "price": 180,
     "category": "Casual",
-    "sizes": ["Medium", "Large"],
-    "colors": ["Red"],
+    "sizes": [
+      "Medium",
+      "Large"
+    ],
+    "colors": [
+      "Red"
+    ],
     "isNewArrival": true,
     "isTopSelling": false
   },
@@ -58,8 +77,13 @@
     "oldPrice": 160,
     "discount": "-30%",
     "category": "Casual",
-    "sizes": ["Small", "Medium"],
-    "colors": ["Orange"],
+    "sizes": [
+      "Small",
+      "Medium"
+    ],
+    "colors": [
+      "Orange"
+    ],
     "isNewArrival": true,
     "isTopSelling": false
   },
@@ -73,8 +97,13 @@
     "oldPrice": 232,
     "discount": "-20%",
     "category": "Casual",
-    "sizes": ["Medium", "Large"],
-    "colors": ["Green"],
+    "sizes": [
+      "Medium",
+      "Large"
+    ],
+    "colors": [
+      "Green"
+    ],
     "isNewArrival": false,
     "isTopSelling": true
   },
@@ -86,8 +115,13 @@
     "rating": 4.0,
     "price": 145,
     "category": "Casual",
-    "sizes": ["Small", "Medium"],
-    "colors": ["Orange"],
+    "sizes": [
+      "Small",
+      "Medium"
+    ],
+    "colors": [
+      "Orange"
+    ],
     "isNewArrival": false,
     "isTopSelling": true
   },
@@ -99,8 +133,13 @@
     "rating": 3.0,
     "price": 80,
     "category": "Casual",
-    "sizes": ["Medium", "Large"],
-    "colors": ["Blue"],
+    "sizes": [
+      "Medium",
+      "Large"
+    ],
+    "colors": [
+      "Blue"
+    ],
     "isNewArrival": false,
     "isTopSelling": true
   },
@@ -112,8 +151,14 @@
     "rating": 4.5,
     "price": 210,
     "category": "Casual",
-    "sizes": ["Medium", "Large", "X-Large"],
-    "colors": ["Black"],
+    "sizes": [
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "colors": [
+      "Black"
+    ],
     "isNewArrival": false,
     "isTopSelling": true
   },
@@ -127,8 +172,13 @@
     "oldPrice": 242,
     "discount": "-20%",
     "category": "Casual",
-    "sizes": ["Medium", "Large"],
-    "colors": ["Blue"],
+    "sizes": [
+      "Medium",
+      "Large"
+    ],
+    "colors": [
+      "Blue"
+    ],
     "isNewArrival": false,
     "isTopSelling": false
   },
@@ -140,8 +190,13 @@
     "rating": 3.5,
     "price": 145,
     "category": "Casual",
-    "sizes": ["Small", "Medium"],
-    "colors": ["White"],
+    "sizes": [
+      "Small",
+      "Medium"
+    ],
+    "colors": [
+      "White"
+    ],
     "isNewArrival": false,
     "isTopSelling": false
   },
@@ -153,8 +208,13 @@
     "rating": 4.5,
     "price": 180,
     "category": "Casual",
-    "sizes": ["Medium", "Large"],
-    "colors": ["Pink"],
+    "sizes": [
+      "Medium",
+      "Large"
+    ],
+    "colors": [
+      "Pink"
+    ],
     "isNewArrival": false,
     "isTopSelling": false
   },
@@ -168,8 +228,13 @@
     "oldPrice": 150,
     "discount": "-30%",
     "category": "Casual",
-    "sizes": ["Large", "X-Large"],
-    "colors": ["Black"],
+    "sizes": [
+      "Large",
+      "X-Large"
+    ],
+    "colors": [
+      "Black"
+    ],
     "isNewArrival": false,
     "isTopSelling": false
   },
@@ -181,8 +246,12 @@
     "rating": 4.5,
     "price": 120,
     "category": "Casual",
-    "sizes": ["Medium"],
-    "colors": ["Orange"],
+    "sizes": [
+      "Medium"
+    ],
+    "colors": [
+      "Orange"
+    ],
     "isNewArrival": false,
     "isTopSelling": false
   }
