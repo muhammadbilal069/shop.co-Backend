@@ -16,7 +16,17 @@ const PORT = process.env.PORT || 5000;
 // Middlewares
 app.use(cors());
 app.use(express.json());
-mongoConnect();
+
+// Serverless Database Middleware (Ensures connection on every request)
+app.use(async (req, res, next) => {
+  try {
+    await mongoConnect();
+    next();
+  } catch (error) {
+    console.error("Database connection error in middleware:", error);
+    res.status(500).json({ message: "Database connection failed", error: error.message });
+  }
+});
 
 // Static Folders
 app.use('/images', express.static(path.join(__dirname, 'public')));
@@ -33,6 +43,11 @@ app.get('/', (req, res) => {
   res.send('Server running!');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Local development ke liye listen (Vercel serverless isay ignore karta hai)
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
