@@ -1,10 +1,37 @@
-const mongoose=require('mongoose');
-const mongoConnect=async()=>{
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log("MongoDb Connected!")
-    } catch (error) {
-        console.log(error)
-    }
+const mongoose = require('mongoose');
+
+// Cache the connection across serverless invocations
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
 }
-module.exports=mongoConnect;
+
+const mongoConnect = async () => {
+  if (cached.conn) {
+    return cached.conn;
+  }
+
+  if (!cached.promise) {
+    const opts = {
+      bufferCommands: false,
+    };
+
+    cached.promise = mongoose.connect(process.env.MONGO_URI, opts).then((mongoose) => {
+      console.log("MongoDb Connected Successfully!");
+      return mongoose;
+    });
+  }
+
+  try {
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    console.error("MongoDB Connection Error:", e);
+    throw e;
+  }
+
+  return cached.conn;
+};
+
+module.exports = mongoConnect;

@@ -1,7 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config(); // Yeh hamesha sabse upar hona chahiye
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const dotenv = require('dotenv');
 const auth = require("./routes/auth");
 const productRoutes = require('./routes/productRoutes');
 const users = require('./routes/users');
@@ -9,8 +11,7 @@ const orders = require('./routes/orders');
 const mongoConnect = require('./config/db');
 
 const app = express();
-const PORT = 5000;
-dotenv.config();
+const PORT = process.env.PORT || 5000;
 
 // Middlewares
 app.use(cors());
@@ -19,7 +20,7 @@ mongoConnect();
 
 // Static Folders
 app.use('/images', express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // <- Yeh line add karni hai
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // API Routes
 app.use('/api/products', productRoutes);
