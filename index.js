@@ -17,7 +17,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Serverless Database Middleware (Ensures connection on every request)
+// Server start hotay hi foran terminal par connection dikhane ke liye
+mongoConnect().catch(err => console.log("Initial DB Connection Error:", err));
+
+// Serverless Database Middleware (Ensures connection on every request for Vercel)
 app.use(async (req, res, next) => {
   try {
     await mongoConnect();

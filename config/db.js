@@ -9,7 +9,9 @@ if (!cached) {
 
 const mongoConnect = async () => {
   if (cached.conn) {
+    console.log("connect");
     return cached.conn;
+    
   }
 
   if (!cached.promise) {
