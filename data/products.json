@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "_id": "1",
     "name": "ONE LIFE GRAPHIC T-SHIRT",
     "image": "https://shop-co-backend-sigma.vercel.app/images/product-1.png",
@@ -15,22 +14,12 @@
     "oldPrice": 300,
     "discount": "-40%",
     "category": "Casual",
-    "sizes": [
-      "Small",
-      "Medium",
-      "Large",
-      "X-Large"
-    ],
-    "colors": [
-      "#4F533E",
-      "#314F4A",
-      "#31344F"
-    ],
+    "sizes": ["Small", "Medium", "Large", "X-Large"],
+    "colors": ["#4F533E", "#314F4A", "#31344F"],
     "isNewArrival": true,
     "isTopSelling": false
   },
   {
-    "id": "2",
     "_id": "2",
     "name": "Skinny Fit Jeans",
     "image": "https://shop-co-backend-sigma.vercel.app/images/jeans.png",
@@ -39,36 +28,24 @@
     "oldPrice": 260,
     "discount": "-20%",
     "category": "Casual",
-    "sizes": [
-      "Large",
-      "X-Large"
-    ],
-    "colors": [
-      "Blue"
-    ],
+    "sizes": ["Large", "X-Large"],
+    "colors": ["Blue"],
     "isNewArrival": true,
     "isTopSelling": false
   },
   {
-    "id": "3",
     "_id": "3",
     "name": "Checkered Shirt",
     "image": "https://shop-co-backend-sigma.vercel.app/images/shirt.png",
     "rating": 4.5,
     "price": 180,
     "category": "Casual",
-    "sizes": [
-      "Medium",
-      "Large"
-    ],
-    "colors": [
-      "Red"
-    ],
+    "sizes": ["Medium", "Large"],
+    "colors": ["Red"],
     "isNewArrival": true,
     "isTopSelling": false
   },
   {
-    "id": "4",
     "_id": "4",
     "name": "Sleeve Striped T-shirt",
     "image": "https://shop-co-backend-sigma.vercel.app/images/striped.png",
@@ -77,18 +54,12 @@
     "oldPrice": 160,
     "discount": "-30%",
     "category": "Casual",
-    "sizes": [
-      "Small",
-      "Medium"
-    ],
-    "colors": [
-      "Orange"
-    ],
+    "sizes": ["Small", "Medium"],
+    "colors": ["Orange"],
     "isNewArrival": true,
     "isTopSelling": false
   },
   {
-    "id": "5",
     "_id": "5",
     "name": "VERTICAL STRIPED SHIRT",
     "image": "https://shop-co-backend-sigma.vercel.app/images/Frame-32.png",
@@ -97,73 +68,48 @@
     "oldPrice": 232,
     "discount": "-20%",
     "category": "Casual",
-    "sizes": [
-      "Medium",
-      "Large"
-    ],
-    "colors": [
-      "Green"
-    ],
+    "sizes": ["Medium", "Large"],
+    "colors": ["Green"],
     "isNewArrival": false,
     "isTopSelling": true
   },
   {
-    "id": "6",
     "_id": "6",
     "name": "COURAGE GRAPHIC T-SHIRT",
     "image": "https://shop-co-backend-sigma.vercel.app/images/Frame-33.png",
     "rating": 4.0,
     "price": 145,
     "category": "Casual",
-    "sizes": [
-      "Small",
-      "Medium"
-    ],
-    "colors": [
-      "Orange"
-    ],
+    "sizes": ["Small", "Medium"],
+    "colors": ["Orange"],
     "isNewArrival": false,
     "isTopSelling": true
   },
   {
-    "id": "7",
     "_id": "7",
     "name": "LOOSE FIT BERMUDA SHORTS",
     "image": "https://shop-co-backend-sigma.vercel.app/images/Frame-34.png",
     "rating": 3.0,
     "price": 80,
     "category": "Casual",
-    "sizes": [
-      "Medium",
-      "Large"
-    ],
-    "colors": [
-      "Blue"
-    ],
+    "sizes": ["Medium", "Large"],
+    "colors": ["Blue"],
     "isNewArrival": false,
     "isTopSelling": true
   },
   {
-    "id": "8",
     "_id": "8",
     "name": "FADED SKINNY JEANS",
     "image": "https://shop-co-backend-sigma.vercel.app/images/Frame-38.png",
     "rating": 4.5,
     "price": 210,
     "category": "Casual",
-    "sizes": [
-      "Medium",
-      "Large",
-      "X-Large"
-    ],
-    "colors": [
-      "Black"
-    ],
+    "sizes": ["Medium", "Large", "X-Large"],
+    "colors": ["Black"],
     "isNewArrival": false,
     "isTopSelling": true
   },
   {
-    "id": "9",
     "_id": "9",
     "name": "Polo with Contrast Trims",
     "image": "https://shop-co-backend-sigma.vercel.app/images/polo-tshit.png",
@@ -172,54 +118,36 @@
     "oldPrice": 242,
     "discount": "-20%",
     "category": "Casual",
-    "sizes": [
-      "Medium",
-      "Large"
-    ],
-    "colors": [
-      "Blue"
-    ],
+    "sizes": ["Medium", "Large"],
+    "colors": ["Blue"],
     "isNewArrival": false,
     "isTopSelling": false
   },
   {
-    "id": "10",
     "_id": "10",
     "name": "Gradient Print T-shirt",
     "image": "https://shop-co-backend-sigma.vercel.app/images/gradient-tshirt.png",
     "rating": 3.5,
     "price": 145,
     "category": "Casual",
-    "sizes": [
-      "Small",
-      "Medium"
-    ],
-    "colors": [
-      "White"
-    ],
+    "sizes": ["Small", "Medium"],
+    "colors": ["White"],
     "isNewArrival": false,
     "isTopSelling": false
   },
   {
-    "id": "11",
     "_id": "11",
     "name": "Polo with Tipping Details",
     "image": "https://shop-co-backend-sigma.vercel.app/images/polo2-tshirt.png",
     "rating": 4.5,
     "price": 180,
     "category": "Casual",
-    "sizes": [
-      "Medium",
-      "Large"
-    ],
-    "colors": [
-      "Pink"
-    ],
+    "sizes": ["Medium", "Large"],
+    "colors": ["Pink"],
     "isNewArrival": false,
     "isTopSelling": false
   },
   {
-    "id": "12",
     "_id": "12",
     "name": "Black Striped T-shirt",
     "image": "https://shop-co-backend-sigma.vercel.app/images/blackstriped-tshirt.png",
@@ -228,30 +156,20 @@
     "oldPrice": 150,
     "discount": "-30%",
     "category": "Casual",
-    "sizes": [
-      "Large",
-      "X-Large"
-    ],
-    "colors": [
-      "Black"
-    ],
+    "sizes": ["Large", "X-Large"],
+    "colors": ["Black"],
     "isNewArrival": false,
     "isTopSelling": false
   },
   {
-    "id": "13",
     "_id": "13",
     "name": "T-shirt with Tape Details",
     "image": "https://shop-co-backend-sigma.vercel.app/images/tshirt.png",
     "rating": 4.5,
     "price": 120,
     "category": "Casual",
-    "sizes": [
-      "Medium"
-    ],
-    "colors": [
-      "Orange"
-    ],
+    "sizes": ["Medium"],
+    "colors": ["Orange"],
     "isNewArrival": false,
     "isTopSelling": false
   }
