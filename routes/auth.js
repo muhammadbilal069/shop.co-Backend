@@ -84,29 +84,6 @@ router.post('/admin/login', async (req, res) => {
   }
 });
 
-// Temporary Admin Creation Route
-router.get('/create-admin-once', async (req, res) => {
-  try {
-    const existingAdmin = await User.findOne({ email: "admin@shop.co" });
-    if (existingAdmin) {
-      return res.status(400).json({ message: "Admin already exists in database!" });
-    }
 
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash("shop.co7676", salt);
-
-    const adminUser = new User({
-      name: "shop.co",
-      email: "admin@shop.co",
-      password: hashedPassword, // Fixed: Now using secure hash instead of plain text
-      role: "admin"
-    });
-
-    await adminUser.save();
-    res.status(201).json({ message: "Admin created successfully with secure hash!" });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
 
 module.exports = router;
