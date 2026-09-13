@@ -164,6 +164,8 @@ router.post('/admin/login', async (req, res) => {
 // addd
 
 
+const bcrypt = require('bcrypt');
+
 router.get('/create-admin-once', async (req, res) => {
   try {
     const salt = await bcrypt.genSalt(10);
@@ -172,7 +174,7 @@ router.get('/create-admin-once', async (req, res) => {
     const adminUser = new User({
       name: "shop.co",
       email: "admin@shop.co",
-      password: hashedPassword,
+      password: hashedPassword, // Yahan hashed password jana chahiye
       role: "admin"
     });
 
