@@ -158,31 +158,4 @@ router.post('/admin/login', async (req, res) => {
   }
 });
 
-
-
-
-// addd
-
-
-const bcrypt = require('bcryptjs');
-
-router.get('/create-admin-once', async (req, res) => {
-  try {
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash("shop.co7676", salt);
-
-    const adminUser = new User({
-      name: "shop.co",
-      email: "admin@shop.co",
-      password: hashedPassword, // Yahan hashed password jana chahiye
-      role: "admin"
-    });
-
-    await adminUser.save();
-    res.status(201).json({ message: "Admin created successfully!" });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
 module.exports = router;
