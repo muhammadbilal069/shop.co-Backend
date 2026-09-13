@@ -6,8 +6,9 @@ const cors = require('cors');
 const path = require('path');
 const auth = require("./routes/auth");
 const productRoutes = require('./routes/productRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 const users = require('./routes/users');
-const orders = require('./routes/orders');
+const orders = require('./routes/orderRoutes');
 const mongoConnect = require('./config/db');
 
 const app = express();
@@ -39,7 +40,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/products', productRoutes);
 app.use('/auth', auth);
 app.use('/api/users', users);
-app.use('/api/orders', orders);
+app.use('/api/orders', orderRoutes);
 
 // Test Route
 app.get('/', (req, res) => {
