@@ -164,7 +164,7 @@ router.post('/admin/login', async (req, res) => {
 // addd
 
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 router.get('/create-admin-once', async (req, res) => {
   try {
