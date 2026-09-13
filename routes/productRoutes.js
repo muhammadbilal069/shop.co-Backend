@@ -2,18 +2,17 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product');
 const multer = require('multer');
-const path = require('path');
 
-// Multer Setup for Image Uploads
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // Ensure 'uploads' folder exists in your backend root
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  }
-});
+// Multer Setup using Memory Storage (Best for Vercel Serverless)
+const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+
+// Helper function to convert buffer to base64 data URI
+const formatImageAsDataUri = (file) => {
+  if (!file) return '';
+  const b64 = Buffer.from(file.buffer).toString('base64');
+  return `data:${file.mimetype};base64,${b64}`;
+};
 
 // 1. Get All Products
 router.get('/', async (req, res) => {
@@ -52,7 +51,9 @@ router.get('/top-selling', async (req, res) => {
 router.post('/', upload.single('image'), async (req, res) => {
   try {
     const { name, price, oldPrice, category, description, isNewArrival, isTopSelling } = req.body;
-    const imagePath = req.file ? `uploads/${req.file.filename}` : '';
+    
+    // Convert image buffer to Base64 string so it works on Vercel without local folders
+    const imagePath = req.file ? formatImageAsDataUri(req.file) : '';
 
     const newProduct = new Product({
       name,
@@ -90,7 +91,7 @@ router.put('/:id', upload.single('image'), async (req, res) => {
     };
 
     if (req.file) {
-      updateData.image = `uploads/${req.file.filename}`;
+      updateData.image = formatImageAsDataUri(req.file);
     }
 
     const updatedProduct = await Product.findOneAndUpdate(
